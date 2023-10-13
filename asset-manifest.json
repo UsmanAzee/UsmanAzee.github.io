@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.3b2dec4c.css",
-    "main.js": "/static/js/main.c0ff623a.js",
+    "main.js": "/static/js/main.0693697a.js",
     "static/css/118.78fa68bb.chunk.css": "/static/css/118.78fa68bb.chunk.css",
-    "static/js/118.fbe06484.chunk.js": "/static/js/118.fbe06484.chunk.js",
+    "static/js/118.ba64f166.chunk.js": "/static/js/118.ba64f166.chunk.js",
     "static/js/610.84ab2691.chunk.js": "/static/js/610.84ab2691.chunk.js",
     "static/js/449.3294870e.chunk.js": "/static/js/449.3294870e.chunk.js",
     "static/js/900.028d297c.chunk.js": "/static/js/900.028d297c.chunk.js",
@@ -45,16 +45,16 @@
     "static/media/icon-account.svg": "/static/media/icon-account.4f72ef0a74d560a5c1d65918b987d4d0.svg",
     "static/media/google-icon.svg": "/static/media/google-icon.95e5452dec502669b35ae4455f6cc0ad.svg",
     "static/media/icon-dd-chat.svg": "/static/media/icon-dd-chat.97a386fc4d199b17d9d48089f5f633f3.svg",
-    "static/media/facebook-icon.svg": "/static/media/facebook-icon.f0391d69645c7323017248ba6ecd7fa8.svg",
     "index.html": "/index.html",
+    "static/media/facebook-icon.svg": "/static/media/facebook-icon.f0391d69645c7323017248ba6ecd7fa8.svg",
     "static/media/icon-dd-mobile.svg": "/static/media/icon-dd-mobile.cf4b1fc4c0c33bc94a74a56f7dd2bd57.svg",
     "static/media/icon-dd-message-box.svg": "/static/media/icon-dd-message-box.81da4cf00d0751508048c1053be725e8.svg",
     "static/media/icon-inbox.svg": "/static/media/icon-inbox.1b210cf98d8b8cafc3a46671fd8fe2ee.svg",
     "static/media/icon-flag-fr.svg": "/static/media/icon-flag-fr.35afd52c95dd5a61c04af9204e3dbeb6.svg",
     "main.3b2dec4c.css.map": "/static/css/main.3b2dec4c.css.map",
-    "main.c0ff623a.js.map": "/static/js/main.c0ff623a.js.map",
+    "main.0693697a.js.map": "/static/js/main.0693697a.js.map",
     "118.78fa68bb.chunk.css.map": "/static/css/118.78fa68bb.chunk.css.map",
-    "118.fbe06484.chunk.js.map": "/static/js/118.fbe06484.chunk.js.map",
+    "118.ba64f166.chunk.js.map": "/static/js/118.ba64f166.chunk.js.map",
     "610.84ab2691.chunk.js.map": "/static/js/610.84ab2691.chunk.js.map",
     "449.3294870e.chunk.js.map": "/static/js/449.3294870e.chunk.js.map",
     "900.028d297c.chunk.js.map": "/static/js/900.028d297c.chunk.js.map",
@@ -75,6 +75,6 @@
   },
   "entrypoints": [
     "static/css/main.3b2dec4c.css",
-    "static/js/main.c0ff623a.js"
+    "static/js/main.0693697a.js"
   ]
 }
