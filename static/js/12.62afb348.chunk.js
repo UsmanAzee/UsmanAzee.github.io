@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbinary_crafts=self.webpackChunkbinary_crafts||[]).push([[12],{28012:function(b,s,a){a(72791);s.Z=a.p+"static/media/login-bg.b99b321b381e2dc64649b9b730b3bef1.svg"}}]);
+//# sourceMappingURL=12.62afb348.chunk.js.map
