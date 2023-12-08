@@ -1,1 +1,195 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="manifest" href="/site.webmanifest"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet"/><title>B - Crafts</title><script defer="defer" src="/static/js/main.d46ff5f7.js"></script><link href="/static/css/main.9b40ef46.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+    <base href="/" />
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="A new Flutter project." />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="sia_app_web" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>sia_app_web</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      const serviceWorkerVersion = "4137034148";
+    </script>
+
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+  </head>
+  <body>
+    <!-- 
+      based on code taken from 
+      https://github.com/flutter/gallery/tree/master_archived/web
+    -->
+    <!-- Loading indicator -->
+    <div id="loading">
+      <style>
+        body {
+          inset: 0;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+          position: fixed;
+        }
+
+        #loading {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+          width: 100%;
+        }
+
+        #loading img {
+          animation: 1s ease-in-out 0s infinite alternate breathe;
+          opacity: 0.66;
+          transition: opacity 0.4s;
+          width: max(10vw, 100px);
+        }
+
+        #loading.main_done img {
+          opacity: 1;
+        }
+
+        #loading.init_done img {
+          animation: 0.33s ease-in-out 0s 1 forwards zooooom;
+          opacity: 0.05;
+        }
+
+        @keyframes breathe {
+          from {
+            transform: scale(1);
+          }
+
+          to {
+            transform: scale(0.95);
+          }
+        }
+
+        @keyframes zooooom {
+          from {
+            transform: scale(1);
+          }
+
+          to {
+            transform: scale(10);
+          }
+        }
+
+        #loading-text {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          color: #0000007c;
+          font-family: "Roboto", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 300;
+          margin-top: 1rem;
+        }
+
+        #loading-text:after {
+          overflow: hidden;
+          display: inline-block;
+          vertical-align: bottom;
+          -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+          animation: ellipsis steps(4, end) 4000ms infinite;
+          content: "\2026"; /* ascii code for the ellipsis character */
+          width: 0px;
+        }
+
+        @keyframes ellipsis {
+          to {
+            width: 1.25em;
+          }
+        }
+
+        @-webkit-keyframes ellipsis {
+          to {
+            width: 1.25em;
+          }
+        }
+      </style>
+      <img src="icons/Icon-192.png" alt="Loading indicator..." />
+      <div id="loading-text">Initializing</div>
+    </div>
+    <!-- 
+      firebase storage image loading issue
+      https://stackoverflow.com/a/77353576
+      https://stackoverflow.com/a/77155610
+      adding renderers: ['html'] to initializeEngine
+      docs: https://docs.flutter.dev/platform-integration/web/initialization 
+    -->
+    <script>
+      window.addEventListener("load", function () {
+        var loading = document.querySelector("#loading");
+        var loadingText = document.querySelector("#loading-text");
+        _flutter.loader
+          .loadEntrypoint({
+            serviceWorker: {
+              serviceWorkerVersion: serviceWorkerVersion,
+            },
+          })
+          .then(function (engineInitializer) {
+            loading.classList.add("main_done");
+            // remove loading text
+            loadingText.remove();
+            return engineInitializer.initializeEngine({ renderer: "html" });
+          })
+          .then(function (appRunner) {
+            loading.classList.add("init_done");
+            return appRunner.runApp();
+          })
+          .then(function (app) {
+            // Wait a few milliseconds so users can see the "zoooom" animation
+            // before getting rid of the "loading" div.
+            window.setTimeout(function () {
+              loading.remove();
+            }, 200);
+          });
+      });
+    </script>
+
+    <!-- <script>
+      window.addEventListener("load", function (ev) {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: async function (engineInitializer) {
+            loading.textContent = "Initializing engine...";
+            let appRunner = await engineInitializer.initializeEngine({ renderer: "html" });
+
+            loading.textContent = "Running app...";
+            await appRunner.runApp();
+          },
+        });
+      });
+    </script> -->
+  </body>
+</html>
