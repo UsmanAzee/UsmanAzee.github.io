@@ -1,195 +1,416 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ameen IT Solutions</title>
+    <meta name="description" content="Ameen IT Slutions for business to growth." />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet" />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-    <base href="/" />
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/default.css" id="theme-color" />
 
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
-
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="sia_app_web" />
-    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png" />
-
-    <title>sia_app_web</title>
-    <link rel="manifest" href="manifest.json" />
-
-    <script>
-      // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = "3724823055";
-    </script>
-
-    <!-- This script adds the flutter initialization JS code -->
-    <script src="flutter.js" defer></script>
+    <script src="js/my_scripts.js"></script>
   </head>
   <body>
-    <!-- 
-      based on code taken from 
-      https://github.com/flutter/gallery/tree/master_archived/web
-    -->
-    <!-- Loading indicator -->
-    <div id="loading">
-      <style>
-        body {
-          inset: 0;
-          overflow: hidden;
-          margin: 0;
-          padding: 0;
-          position: fixed;
-        }
+    <!--navigation-->
+    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
+      <a class="navbar-brand mx-auto" href="index.html"> Ameen IT Solutions </a>
+      <button
+        class="navbar-toggler navbar-toggler-right border-0"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span data-feather="grid"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#process">Process</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <p class="mb-0 mx-3"><a class="page-scroll font-weight-bold" href="#contact">Work with us</a></p>
+        </form>
+      </div>
+    </nav>
 
-        #loading {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          justify-content: center;
-          width: 100%;
-        }
+    <!--hero header-->
+    <section class="pt-7 pt-md-8" id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto my-auto text-center">
+            <h1>Products & services to help you grow business.</h1>
+            <p class="lead mt-4 mb-5">Transform your business with cutting-edge solutions tailored to elevate productivity and drive innovation.</p>
+            <p><img class="img-fluid" src="img/mockup.png" alt="Mockup" /></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        #loading img {
-          animation: 1s ease-in-out 0s infinite alternate breathe;
-          opacity: 0.66;
-          transition: opacity 0.4s;
-          width: max(10vw, 100px);
-        }
+    <!-- about section -->
+    <section class="pb-7" id="about">
+      <div class="container">
+        <hr class="my-6" />
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center">
+            <h4 class="dot-circle font-weight-normal">We work with world's top companies to create beautiful products & apps.</h4>
+          </div>
+        </div>
 
-        #loading.main_done img {
-          opacity: 1;
-        }
+        <div class="row mt-5">
+          <div class="col-md-6 order-2 order-md-1 my-md-auto">
+            <h3>Seamless Integration for Enhanced Workflow</h3>
+            <p class="text-muted lead">
+              Experience synergy between iMac and iPad, maximizing efficiency and streamlining your tasks effortlessly. Boost productivity, elevate performance.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">View project</a> -->
+          </div>
+          <div class="col-md-6 order-1 order-md-2">
+            <img src="img/google-design.jpeg" class="img-fluid d-block mx-auto" alt="Google Design" />
+          </div>
+          <div class="col-md-6 order-3 mx-auto border-top border-bottom mt-5 mt-md-0 py-4">
+            <div class="review text-center">
+              <p class="quote">
+                Ameen IT Solutions exceeded my expectations! Their team's expertise and dedication turned our vision into reality. Truly impressed with the results!
+              </p>
+              <div class="mt-4 d-flex flex-row align-items-center justify-content-center">
+                <!-- <img src="img/client-1.jpg" class="img-review rounded-circle mr-2" alt="Client 1"/> -->
+                <span class="text-muted">A satisfied customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        #loading.init_done img {
-          animation: 0.33s ease-in-out 0s 1 forwards zooooom;
-          opacity: 0.05;
-        }
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/facebook-messenger.jpeg" class="img-fluid d-block mx-auto" alt="Facebook Messenger" />
+          </div>
+          <div class="col-md-6 my-md-auto">
+            <h3>Seamless Mobility, Infinite Possibilities</h3>
+            <p class="text-muted lead">
+              Empower your business with our Android solutions. Unleash the potential of tablets and smartphones for unparalleled flexibility and innovation.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">View project</a> -->
+          </div>
+          <div class="col-md-6 mx-auto border-top border-bottom mt-5 mt-md-0 py-4">
+            <div class="review text-center">
+              <p class="quote">
+                Exceptional service from Ameen IT Solutions! Our project was delivered on time, and the support post-launch has been outstanding. Highly recommend their
+                professional and skilled team.
+              </p>
+              <div class="mt-4 d-flex flex-row align-items-center justify-content-center">
+                <!-- <img src="img/client-2.jpg" class="img-review rounded-circle mr-2" alt="Client 2"/> -->
+                <span class="text-muted">Another fullfilled promise !</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        @keyframes breathe {
-          from {
-            transform: scale(1);
-          }
+        <div class="row">
+          <div class="col-md-6 order-2 order-md-1 my-md-auto">
+            <h3>Robust Backend Solutions, Empowering Your Data Management</h3>
+            <p class="text-muted lead">
+              Elevate your operations with our advanced backend services. Efficiently manage and leverage data for unparalleled business intelligence and growth.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">View project</a> -->
+          </div>
+          <div class="col-md-6 order-1 order-md-2">
+            <img src="img/twitter-mobile.jpeg" class="img-fluid d-block mx-auto" alt="Twitter Mobile" />
+          </div>
+        </div>
 
-          to {
-            transform: scale(0.95);
-          }
-        }
+        <div class="row mt-6">
+          <div class="col-md-6 mx-auto text-center">
+            <h4>Want to work with us?</h4>
+            <p class="lead text-muted">Ready to launch your awesome project? We'd be happy to help you.</p>
+            <a href="#contact" class="btn btn-primary page-scroll">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        @keyframes zooooom {
-          from {
-            transform: scale(1);
-          }
+    <!--services section-->
+    <section class="bg-light py-7" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto">
+            <h2 class="dot-circle">Services we offer</h2>
+            <p class="text-muted lead">
+              Discover a comprehensive suite of services tailored to meet your needs. From innovative software and applications to bespoke solutions, we empower
+              businesses and ideas with cutting-edge technology and expertise.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-10 mx-auto">
+            <div class="row card-services">
+              <div class="col-md-6 mb-3">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="icon-box border-box">
+                      <div class="icon-box-inner small-xs text-primary">
+                        <span data-feather="crop" width="30" height="30"></span>
+                      </div>
+                    </div>
+                    <h5 class="mt-0 mb-3">Web design</h5>
+                    Crafting visually stunning websites that captivate and engage your audience seamlessly.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="icon-box border-box">
+                      <div class="icon-box-inner small-xs text-primary">
+                        <span data-feather="monitor" width="30" height="30"></span>
+                      </div>
+                    </div>
+                    <h5 class="mt-0 mb-3">Web development</h5>
+                    Building robust, scalable web solutions tailored to your unique business requirements and goals.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="icon-box border-box">
+                      <div class="icon-box-inner small-xs text-primary">
+                        <span data-feather="briefcase" width="30" height="30"></span>
+                      </div>
+                    </div>
+                    <h5 class="mt-0 mb-3">Branding</h5>
+                    Strategic brand development that leaves a lasting impression, fostering trust and recognition in every interaction.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="icon-box border-box">
+                      <div class="icon-box-inner small-xs text-primary">
+                        <span data-feather="smartphone" width="30" height="30"></span>
+                      </div>
+                    </div>
+                    <h5 class="mt-0 mb-3">Mobile apps</h5>
+                    Innovative mobile applications that bring your ideas to life, delivering seamless user experiences across platforms.
+                  </div>
+                </div>
+              </div>
 
-          to {
-            transform: scale(10);
-          }
-        }
+              <div class="col-md-6 mx-auto text-center">
+                <hr class="my-5" />
+                <h4>Need a custom solution tailored to your needs?</h4>
+                <a href="#contact" class="btn btn-primary page-scroll">Work with us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        #loading-text {
-          align-items: center;
-          display: flex;
-          justify-content: center;
-          color: #0000007c;
-          font-family: "Roboto", sans-serif;
-          font-size: 1.5rem;
-          font-weight: 300;
-          margin-top: 1rem;
-        }
+    <!--call to action-->
+    <section class="bg-hero py-8" style="background-image: url(img/parallex.jpg)">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center">
+            <h2 class="text-white">We help the world's top companies to create amazing products.</h2>
+            <p class="lead text-white my-4">Ready to launch your awesome website?</p>
+            <a class="btn btn-primary page-scroll" href="#contact">Request a free quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        #loading-text:after {
-          overflow: hidden;
-          display: inline-block;
-          vertical-align: bottom;
-          -webkit-animation: ellipsis steps(4, end) 900ms infinite;
-          animation: ellipsis steps(4, end) 4000ms infinite;
-          content: "\2026"; /* ascii code for the ellipsis character */
-          width: 0px;
-        }
+    <!--process-->
+    <section class="py-7" id="process">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center">
+            <h2>How we work</h2>
+            <p class="lead text-muted">
+              Innovative collaboration. Transparent communication. Agile methodologies. Discover our effective approach, ensuring success at every stage of your project
+              journey.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-7 mx-auto timeline">
+            <div class="media pb-5">
+              <div class="icon-box mt-1">
+                <div class="icon-box-inner small-xs text-primary">
+                  <span data-feather="disc"></span>
+                </div>
+              </div>
+              <div class="media-body">
+                <h5>Discovery</h5>
+                <p class="text-muted">Uncover opportunities and challenges through in-depth analysis, laying the foundation for a successful project journey.</p>
+              </div>
+            </div>
+            <div class="media pb-5">
+              <div class="icon-box mt-1">
+                <div class="icon-box-inner small-xs text-primary">
+                  <span data-feather="copy"></span>
+                </div>
+              </div>
+              <div class="media-body">
+                <h5>UI/UX Design</h5>
+                <p class="text-muted">Crafting intuitive and visually appealing interfaces, ensuring seamless user experiences that resonate with your audience.</p>
+              </div>
+            </div>
+            <div class="media pb-5">
+              <div class="icon-box mt-1">
+                <div class="icon-box-inner small-xs text-primary">
+                  <span data-feather="box"></span>
+                </div>
+              </div>
+              <div class="media-body">
+                <h5>QA & Testing</h5>
+                <p class="text-muted">Rigorous testing protocols to guarantee product excellence, identifying and resolving issues for a flawless end-user experience.</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="icon-box mt-1">
+                <div class="icon-box-inner small-xs text-primary">
+                  <span data-feather="server"></span>
+                </div>
+              </div>
+              <div class="media-body">
+                <h5>Deployment</h5>
+                <p class="text-muted">
+                  Smooth transition from development to implementation, ensuring your solution is seamlessly integrated and ready for optimal performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-7">
+          <div class="col-md-6 mx-auto text-center">
+            <h3 class="dot-circle dot-lg">90-day satisfaction guarantee.</h3>
+            <p class="lead text-muted mb-4">
+              We know you're gonna love our professional services, but let us prove it. If our service hasn't exceeded your expectations after 90 days, you'll get a full
+              refund. Simple as that.
+            </p>
+            <a class="btn btn-primary page-scroll" href="#contact">Get started risk free</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        @keyframes ellipsis {
-          to {
-            width: 1.25em;
-          }
-        }
+    <!--contact section-->
+    <section class="py-7" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center">
+            <h2>Want to work with us?</h2>
+            <div class="divider bg-primary mx-auto"></div>
+            <p class="text-muted lead">Are you working on something great? We'd love to help make it happen.</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-8 mx-auto">
+            <form id="contact_us_form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your name" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your email address" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Phone number" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="url" class="form-control" placeholder="Your website" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea rows="5" class="form-control" placeholder="What are you looking for?"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-3">
+                <button class="btn btn-primary">Send your message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        @-webkit-keyframes ellipsis {
-          to {
-            width: 1.25em;
-          }
-        }
-      </style>
-      <img src="icons/Icon-192.png" alt="Loading indicator..." />
-      <div id="loading-text">Initializing</div>
+    <!--footer / contact-->
+    <footer class="py-6 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto text-center">
+            <p class="text-muted small text-uppercase"><strong>Business & Visit Address:</strong> House #597, Block M2A, Lake City, Lahore, Pakistan</p>
+            <p class="text-muted small text-uppercase"><strong>Contact in Business Hours:</strong> +92 344 4441166 | <strong>Contact Person:</strong> Ameen Abid</p>
+            <p class="text-muted small text-uppercase"><strong>Correspondant:</strong> Bushra Anwar | <strong>Contact Email:</strong> bushraazeemi12@gmail.com</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-muted text-center small-xl">&copy; 2024 Ameen IT Solutions - All Rights Reserved</div>
+        </div>
+      </div>
+    </footer>
+
+    <!--scroll to top-->
+    <div class="scroll-top">
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
     </div>
-    <!-- 
-      firebase storage image loading issue
-      https://stackoverflow.com/a/77353576
-      https://stackoverflow.com/a/77155610
-      adding renderers: ['html'] to initializeEngine
-      docs: https://docs.flutter.dev/platform-integration/web/initialization 
-    -->
-    <script>
-      window.addEventListener("load", function () {
-        var loading = document.querySelector("#loading");
-        var loadingText = document.querySelector("#loading-text");
-        _flutter.loader
-          .loadEntrypoint({
-            serviceWorker: {
-              serviceWorkerVersion: serviceWorkerVersion,
-            },
-          })
-          .then(function (engineInitializer) {
-            loading.classList.add("main_done");
-            // remove loading text
-            loadingText.remove();
-            return engineInitializer.initializeEngine({ renderer: "html" });
-          })
-          .then(function (appRunner) {
-            loading.classList.add("init_done");
-            return appRunner.runApp();
-          })
-          .then(function (app) {
-            // Wait a few milliseconds so users can see the "zoooom" animation
-            // before getting rid of the "loading" div.
-            window.setTimeout(function () {
-              loading.remove();
-            }, 200);
-          });
-      });
-    </script>
 
-    <!-- <script>
-      window.addEventListener("load", function (ev) {
-        // Download main.dart.js
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: serviceWorkerVersion,
-          },
-          onEntrypointLoaded: async function (engineInitializer) {
-            loading.textContent = "Initializing engine...";
-            let appRunner = await engineInitializer.initializeEngine({ renderer: "html" });
+    <!-- theme switcher (FOR DEMO ONLY - REMOVE FROM PRODUCTION)-->
+    <!-- <div class="switcher-wrap">
+            <div class="switcher-trigger">
+                <span class="fa fa-gear"></span>
+            </div>
+            <div class="color-switcher">
+                <h6>Color Switcher</h6>
+                <ul class="mt-3 clearfix">
+                    <li class="bg-green active" data-color="default" title="Default Green"></li>
+                    <li class="bg-blue" data-color="blue" title="Blue"></li>
+                    <li class="bg-red" data-color="red" title="Red"></li>
+                    <li class="bg-indigo" data-color="indigo" title="Indigo"></li>
+                    <li class="bg-orange" data-color="orange" title="Orange"></li>
+                    <li class="bg-black" data-color="black" title="Black"></li>
+                    <li class="bg-teal" data-color="teal" title="Teal"></li>
+                    <li class="bg-cyan" data-color="cyan" title="Cyan"></li>
+                    <li class="bg-purple" data-color="purple" title="Purple"></li>
+                    <li class="bg-pink" data-color="pink" title="Pink"></li>
+                </ul>
+                <p>These are just demo colors. You can <b>easily</b> create your own color scheme.</p>
+            </div>
+        </div> -->
 
-            loading.textContent = "Running app...";
-            await appRunner.runApp();
-          },
-        });
-      });
-    </script> -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
